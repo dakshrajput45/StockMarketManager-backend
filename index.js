@@ -8,13 +8,7 @@ const jwt = require("jsonwebtoken");
 
 
 app.use(express.json())
-app.use(cors(
-    {
-        origin : ["https://stock-market-manager.vercel.app"],
-        methods : ["POST"],
-        credentials : true
-    }
-));
+app.use(cors());
 
 const PORT= process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET;
